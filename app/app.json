@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Domates Yaprak Hastalık Tespiti",
+    "slug": "tomato-leaf-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.tomatoleafapp"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.yourcompany.tomatoleafapp",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Uygulama, domates yaprak analizleri için fotoğraflarınıza erişmek istiyor.",
+          "cameraPermission": "Uygulama, domates yaprak analizleri için kameranıza erişmek istiyor."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "5df01353-f6c7-4b01-a89f-5bb9e73a2410"
+      }
+    }
+  }
+}
