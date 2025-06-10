@@ -1,80 +1,70 @@
-# tomatoDiseaseDetector
+LeafLens - Domates Yaprağı Hastalık Tespit Uygulaması
+LeafLens, domates yapraklarındaki hastalıkları tespit edebilen mobil bir uygulamadır. Yapay zekâ destekli bu uygulama, **Flask** tabanlı bir backend ve **React Native (Expo)** ile geliştirilen bir mobil arayüzden oluşuyor.
 
-# 🍅 LeafLens - Tomato Leaf Disease Detector
+## Genel Özellikler
+* Kullanıcı, telefon kamerasıyla bir domates yaprağının fotoğrafını çeker
+* Bu görsel, Flask API aracılığıyla sunucuya gönderilir
+* Sunucudaki model (YOLOv12) görseli analiz eder
+* Tespit edilen hastalık ve ilgili bölge uygulama arayüzünde gösterilir
 
-LeafLens is a mobile application that detects tomato leaf diseases using deep learning. The app integrates a **Flask-based backend** running a **YOLOv12 model** and a **React Native frontend** built with **Expo**.
+##  Özellikler
+* YOLOv12 ile hastalık sınıflandırması ve konum tespiti
+* React Native ile geliştirilen mobil arayüz
+* Flask REST API üzerinden gerçek zamanlı tahmin
+* Yaprak üzerindeki hastalıklı alanlar kutucuklarla gösterilir
 
-## 🔍 Overview
+##  Kullanılan Teknolojiler
 
-- 📱 Users can capture a photo of a tomato leaf via mobile  
-- ☁️ The image is sent to the Flask backend API  
-- 🧠 The backend model analyzes the image using **YOLOv12**  
-- 📊 Detected disease and affected region are sent back and displayed on the app  
+### Mobil Uygulama (Frontend)
+* React Native
+* Expo
+* TypeScript
 
-## 🎯 Features
+### Sunucu (Backend)
+* Python (Flask)
+* YOLOv12 (Ultralytics)
+* OpenCV (görsel ön işleme için)
 
-- Disease classification and localization using **YOLOv12**  
-- Mobile interface developed with **React Native + Expo**  
-- Real-time prediction powered by a **Flask REST API**  
-- Visual feedback with bounding boxes on diseased leaf areas  
+## 🧺aset ve Model Eğitimi
 
-## 🛠️ Technologies
+* 10 farklı domates yaprağı hastalığını içeren bir veri seti kullanıldı
+* Görseller ön işlemlerden geçirildi ve çeşitli yöntemlerle artırıldı
+* YOLOv12 modeli Ultralytics framework’üyle eğitildi
+* Model, yüksek doğruluk oranı ile tahmin yapabiliyor ve hastalık bölgelerini kutularla belirtiyor
 
-### Frontend (Mobile)
-- React Native  
-- Expo Go  
-- TypeScript  
-
-### Backend
-- Python (Flask)  
-- YOLOv12 (Ultralytics)  
-- OpenCV for preprocessing  
-
-## 🧪 Dataset & Training
-
-- 10-class tomato leaf disease dataset  
-- Images preprocessed and augmented  
-- Model trained using YOLOv12 with Ultralytics framework  
-- High accuracy with detailed bounding box predictions  
-
-## 📁 Project Structure
-
+## 📁 Proje Dosya Yapısı
 ```
 LeafLensProject/
-├── app/               # React Native frontend
+├── app/               # Mobil uygulama (React Native)
 │   ├── components/
 │   ├── assets/
 │   └── ...
-├── backend/           # Flask backend
-│   ├── yolov12/       # YOLOv12 model & utils
+├── backend/           # Flask sunucu
+│   ├── yolov12/       # Model ve yardımcı dosyalar
 │   ├── app.py         # Flask API
 │   └── requirements.txt
 ```
 
-## 🚀 Getting Started
+## 🚀 Nasıl Çalıştırılır?
+### Backend (Sunucu)
 
-### Backend
 ```bash
 cd backend
 pip install -r requirements.txt
 python app.py
 ```
 
-### Frontend
+### Frontend (Mobil Uygulama)
+
 ```bash
 cd app
 npm install
 npx expo start
 ```
 
-## 👩‍💻 My Role
+## Benim Katkım
+Projede, domates yaprağı hastalıklarını sınıflandırmak için **InceptionV3 tabanlı bir model** geliştirdim ve bu modeli Flask sunucusuna entegre ettim. Ayrıca, yapay zekâ tarafındaki süreçlerde aktif rol aldım ve mobil geliştirici ekiple birlikte çalışarak sistemi uçtan uca test ettim.
 
-I developed and trained the **InceptionV3-based deep learning model** used to classify tomato leaf diseases. I also helped integrate this model into the Flask backend, contributing to the AI pipeline of the application while collaborating with the mobile development team.
 
-## 📸 Screenshots
-
-_Coming soon..._
-
-## 📄 License
-
-This project was created for academic purposes and showcases the integration of mobile interfaces with AI-powered disease detection.
+##  Lisans
+Bu proje, akademik amaçlarla geliştirilmiştir ve mobil uygulamalar ile yapay zekânın nasıl entegre edilebileceğini göstermeyi hedeflemektedir.
