@@ -67,3 +67,6 @@ Projede, domates yaprağı hastalıklarını sınıflandırmak için **Inception
 
 ##  Lisans
 Bu proje, akademik amaçlarla geliştirilmiştir ve mobil uygulamalar ile yapay zekânın nasıl entegre edilebileceğini göstermeyi hedeflemektedir.
+![1748968716379](https://github.com/user-attachments/assets/0efcf67a-5a8a-4818-bd8e-c1e1fd3f98fa)
+
+
