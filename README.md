@@ -25,14 +25,13 @@ LeafLens, domates yapraklarındaki hastalıkları tespit edebilen mobil bir uygu
 * YOLOv12 (Ultralytics)
 * OpenCV (görsel ön işleme için)
 
-## 🧺aset ve Model Eğitimi
-
+## Model Eğitimi
 * 10 farklı domates yaprağı hastalığını içeren bir veri seti kullanıldı
 * Görseller ön işlemlerden geçirildi ve çeşitli yöntemlerle artırıldı
 * YOLOv12 modeli Ultralytics framework’üyle eğitildi
 * Model, yüksek doğruluk oranı ile tahmin yapabiliyor ve hastalık bölgelerini kutularla belirtiyor
 
-## 📁 Proje Dosya Yapısı
+##  Proje Dosya Yapısı
 ```
 LeafLensProject/
 ├── app/               # Mobil uygulama (React Native)
@@ -45,7 +44,7 @@ LeafLensProject/
 │   └── requirements.txt
 ```
 
-## 🚀 Nasıl Çalıştırılır?
+##  Nasıl Çalıştırılır?
 ### Backend (Sunucu)
 
 ```bash
